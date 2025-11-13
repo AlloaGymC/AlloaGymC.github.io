@@ -1,0 +1,128 @@
+<style>
+    :root{
+      --brand:#0f6ad6;     /* primary accent */
+      --text:#0f172a;      /* slate-900 */
+      --muted:#f1f5f9;     /* slate-100 */
+      --border:#e2e8f0;    /* slate-200 */
+      --bg:#ffffff;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; line-height:1.5; color:var(--text); background:var(--bg);
+    }
+    a{color:inherit; text-decoration:none}
+    a:focus-visible, button:focus-visible{outline:3px solid var(--brand); outline-offset:2px}
+
+    /* Skip link for accessibility */
+    .skip-link{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip-link:focus{left:1rem; top:1rem; width:auto; height:auto; background:var(--bg); border:2px solid var(--brand); border-radius:.5rem; padding:.5rem .75rem; z-index:1001}
+
+    /* Header */
+    header.site-header{position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--border); z-index:1000}
+    .header-inner {
+  width:100%;
+  padding:.5rem 1rem;
+  display:grid;
+  grid-template-columns: auto 1fr; /* logo left, nav takes rest */
+  gap:1rem;
+  align-items:center;
+}
+
+    /* Navigation */
+    nav.primary{overflow-x:auto; -webkit-overflow-scrolling:touch}
+    .nav-list{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem .75rem}
+    .nav-list a{display:inline-block; padding:.5rem .75rem; border-radius:999px}
+    .nav-list a:hover{background:var(--muted)}
+    .nav-list a[aria-current="page"]{background:var(--muted); color:var(--brand); font-weight:600}
+
+    /* Picture placeholder (top-right) */
+    .brand-pic{width:150px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:.875rem; padding:.25rem; text-align:center; background:#fafcff}
+    .brand-pic img{width:100%; height:100%; object-fit:cover; border-radius:.5rem; display:block}
+
+    /* Page container */
+    .container{max-width:var(--maxw); margin:0 auto; padding:1.25rem 1rem}
+    .page-title{margin:.25rem 0 1rem; font-size:clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem)}
+    .card{background:#fff; border:1px solid var(--border); border-radius:1rem; padding:1rem 1.25rem}
+
+    /* Footer */
+    footer.site-footer{border-top:1px solid var(--border); margin-top:2rem}
+    .footer-inner{max-width:var(--maxw); margin:0 auto; padding:1rem; font-size:.925rem; color:#475569}
+
+    /* Responsive tweaks */
+    @media (max-width: 640px){
+      .header-inner{grid-template-columns:1fr auto}
+      .brand-pic{width:120px; height:70px}
+      .nav-list{gap:.25rem .5rem}
+      .nav-list a{padding:.4rem .6rem}
+    }
+
+   /* 1) Single source of truth for width */
+:root { --maxw: 1200px; }
+
+/* 2) Only the frame is constrained and centered */
+.frame {
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100dvh;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(2,6,23,.08);
+  border: 1px solid #e2e8f0;
+  border-top: none;
+}
+
+/* 3) Inner sections should fill the frame */
+.header-inner,
+.container,
+.footer-inner {
+  width: 100%;
+  /* remove ANY max-width here */
+}
+
+/* 4) Header layout: logo left, nav fills the rest, vertically centered */
+.header-inner {
+  padding: .5rem 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr; /* logo, then nav */
+  gap: 1rem;
+  align-items: center;            /* vertical middle alignment */
+}
+
+/* Optional: center the nav items horizontally within their area */
+.nav-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: .5rem .75rem;
+  /* uncomment this if you want the links centered across the top:
+  justify-content: center;
+  */
+}
+
+/* Ensure the page background shows the “frame” effect */
+body { background: #f1f5f9; margin: 0; }
+.logo-banner {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* (in case image shorter/taller) */
+  height: 150px;           /* fixed height */
+  overflow: hidden;        /* crop if image too tall */
+  background: #fff;        /* fallback background */
+}
+
+.logo-banner img {
+  height: 150px;   /* fixed height */
+  width: auto;     /* keep proportions */
+  max-width: 100%; /* shrink on small screens */
+  display: block;
+}
+/* Navigation now sits below the banner */
+nav.primary {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  overflow-x: auto;
+}
+
+
+  </style>

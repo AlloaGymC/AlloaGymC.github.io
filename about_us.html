@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGC — About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="primary" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="join.html">Join AGC</a></li>
+          <li><a href="calendar.html">Calendar &amp; Events</a></li>
+          <li><a href="news.html">Club News</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="brand-pic">Your image here</div>
+    </div>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <h1 class="page-title">About Us</h1>
+    <div class="card">
+      <p>Welcome to the AGC About page. Add your content here.</p>
+    </div>
+    <div class="card">
+      <p>"This is Ava's details"</p>
+    </div>
+    <div class="card">
+      <p>"This is Lauren's details"</p>
+    </div>
+    <div class="card">
+      <p>"Blah Blah Blah"</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; <span id="year"></span> AGC. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
