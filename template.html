@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGC — Page Title</title>
+
+  <!-- CSS link with cache-busting timestamp -->
+  <script>
+    const cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = 'style.css?v=' + new Date().getTime(); // unique every load
+    document.head.appendChild(cssLink);
+  </script>
+</head>
+<body>
+  <div class="frame">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+  <div class="logo-banner">
+    <img src="Alloa_Gymnastics_Club.png" alt="AGC logo full banner">
+  </div>
+
+  <nav class="primary" aria-label="Primary">
+    <ul class="nav-list">
+      <li><a href="#" aria-current="page">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Classes</a></li>
+      <li><a href="#">Join AGC</a></li>
+      <li><a href="#">Calendar &amp; Events</a></li>
+      <li><a href="#">Club News</a></li>
+      <li><a href="#">Downloads</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+    <main id="main" class="container" tabindex="-1">
+      <h1 class="page-title">Page Title</h1>
+      <div class="card">
+        <p>
+          Start your page content here. This template keeps a picture/logo at the top-left
+          and the navigation links along the rest of the top. Duplicate this file for additional
+          pages and update the <code>aria-current="page"</code> attribute on the active nav link.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>&copy; <span id="year"></span> AGC. All rights reserved.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set the year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
