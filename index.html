@@ -1,11 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>This is your welcome page </title>
+
 </head>
 <body>
-    <h1>Hello, World - This is Ewan on github.io!</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+      <div>
+
+     <img class="brand-pic" src="Alloa_Gymnastics_Club.png" alt="AGC logo Placeholder"></div>
+    <div class="header-inner">
+      <!-- Left area: navigation links across the top -->
+      <nav class="primary" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Join AGC</a></li>
+          <li><a href="#">Calendar &amp; Events</a></li>
+          <li><a href="#">Club News</a></li>
+          <li><a href="#">Downloads</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right area: picture/logo placeholder (replace with <img class="brand-pic" src="/path/to/logo.png" alt="AGC logo" />) -->
+
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <h1 class="page-title">Page Title</h1>
+    <div class="card">
+      <p>Start your page content here. This template keeps a picture/logo at the top-right and the navigation links along the rest of the top. Duplicate this file for additional pages and update the <code>aria-current="page"</code> attribute on the active nav link.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; <span id="year"></span> AGC. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Set the year automatically (optional)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
